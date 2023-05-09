@@ -1,0 +1,95 @@
+Array
+how are we going to organize data? = data structure
+most basic data structure = array
+
+world without arrays
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
+it will be tidious to make variables for every datas that are needed for the same reason, ex) shopping list, types of stuff
+making a list is better than writing every independent variables
+
+making array
+const array = ["",""];
+any data type can be stored in array
+number, "text", boolean, variable
+
+finding item in array
+array[0], array[4]
+computer doesn't count from 1, it counts from 0
+so the array starts index number from 0 not 1
+
+changing existing array
+array.push("");
+
+
+
+Object
+how can we store items with more details? = object & properties
+it is not a list, list can only store data needed for same reason, they all have the exact detail, useless when a different detail data is stored because we can't know it has a different detail
+
+making object
+const player = {
+	name: "Vambroag",
+	points: 10,
+	fat: false,
+};
+any data type can be come a property inside object
+
+we can't change the object directly, but we can change properties inside the object
+X player = person;
+O player.person = true;
+O player.points = player.points + 15;
+O player.fat = true;
+
+
+Functions
+function is a piece of code we can run over and over and over and over forever
+it helps to reduce our code that repeats or uses the same format
+
+-making function
+function sayHello() {
+	console.log("Hello!");
+}
+
+-using function
+sayHello();
+writing the name of the function will execute(run) the function
+
+function can also receive data from the outside, we can send data to function
+this argument can be only used inside the function
+function greet(personName) {
+	console.log("Hello " + personName + "! Nice to meet you!");
+}
+greet("Vambroag"); // result: Hello Vambroag! Nice to meet you!
+
+if there is only one argument then the function will only take the first data it receives even though there is alot of data being sent
+greet("Vambroag", "Nico", "Dal", "Nicolas");
+// result: Hello Vambroag! Nice to meet you!
+
+there can be multiple argument
+function introduceMyself(myName, myAge, myHeight) {
+	console.log("Hello! I'm " + myName + ". I'm " + myAge + " and " + myHeight + "cm tall.");
+}
+function introduceMyself(Vamrboag, 23, 179);
+// result: Hello! I'm Vambroag. I'm 23 and 179cm tall.
+
+argument is sent to function in written order
+function introduceMyself(Vamrboag, 23, 179);
+// result: Hello! I'm Vambroag. I'm 23 and 179cm tall.
+function introduceMyself(23, 179, Vambroag);
+// result: Hello! I'm 23. I'm 179 and Vambroagcm tall.
+
+function can be made inside object
+const player = {
+	name: "Vambroag",
+	sayHello: function (otherPersonName) {
+		console.log("Hello " + otherPersonName + " nice to meet you!");
+	},
+};
+console.log(player.name); // result: Vambroag
+player.sayHello("Nico"); // result: Hello Nico nice to meet you!
